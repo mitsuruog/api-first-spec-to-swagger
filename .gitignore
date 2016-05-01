@@ -1,0 +1,6 @@
+node_modules
+.idea
+.apifs2swagger
+.nyc_output
+coverage
+docs
