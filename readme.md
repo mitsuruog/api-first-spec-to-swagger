@@ -31,7 +31,7 @@ The patterns that should executed files. patterns using [node-glob](https://gith
 
 #### options
 
-##### output
+##### -o --output
 
 Type: `string`<br>
 Default: `docs`
