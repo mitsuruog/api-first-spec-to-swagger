@@ -1,12 +1,12 @@
 'use strict';
 
-const glob = require('glob');
+const Module = require('module');
+const originalRequire = Module.prototype.require;
+
 const fs = require('fs');
 const path = require('path');
 const chalk = require('chalk');
-
-const Module = require('module');
-const originalRequire = Module.prototype.require;
+const glob = require('glob');
 
 // Override original module
 const sinon = require('sinon');
@@ -16,15 +16,13 @@ sinon.stub(spec, 'define', require('./lib/swaggerRepoter'));
 Module.prototype.require = function () {
   if (arguments[0] === 'api-first-spec') {
     return spec;
-  } else {
-    return originalRequire.apply(this, arguments);
   }
+  return originalRequire.apply(this, arguments);
 };
 
 const TMP_DIR = './.apifs2swagger';
 
 module.exports = (patterns, opts) => {
-
   const outputDir = opts.o || 'docs';
 
   console.log(chalk.underline(`start processing`));
@@ -80,7 +78,5 @@ module.exports = (patterns, opts) => {
         console.log(chalk.underline(`generate API doc completed.`));
         console.log(chalk.gray(`generated >> ${outputDir}`));
       });
-
   });
-
 };
