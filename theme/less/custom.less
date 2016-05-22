@@ -17,6 +17,15 @@
   }
 }
 
+.json-schema-properties:before,
+.json-schema-array-items:before {
+  content: none;
+}
+
+.json-schema-properties dd:not(:last-child) {
+  padding-bottom: 0.5em;
+}
+
 .swagger--jump-to-top {
   position: fixed;
   bottom: 1rem;
