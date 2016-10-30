@@ -1,6 +1,6 @@
 {
   "name": "apifs2swagger",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Swagger JSON Converter for api-first-spec",
   "license": "MIT",
   "repository": "mitsuruog/api-first-spec-to-swagger",
