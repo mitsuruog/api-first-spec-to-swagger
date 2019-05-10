@@ -11,7 +11,7 @@
   },
   "bin": "cli.js",
   "engines": {
-    "node": ">=0.4.2"
+    "node": ">=8.9.0"
   },
   "scripts": {
     "test": "xo && nyc ava"
@@ -30,8 +30,8 @@
   ],
   "dependencies": {
     "api-first-spec": "^0.2.10",
-    "bootprint": "^0.8.5",
-    "bootprint-openapi": "^0.16.0",
+    "bootprint": "^1.0.2",
+    "bootprint-openapi": "^1.1.1",
     "chalk": "^1.1.3",
     "glob": "^7.0.3",
     "meow": "^3.7.0",
